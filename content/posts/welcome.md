@@ -20,4 +20,4 @@ This site brings my [CV](/cv/), [projects](/projects/) and [education](/educatio
 
 Persian is my native language, English is the language I work in, and Italian is the language of the country where I live. Some posts will appear in all three, others in just one.
 
-If you'd like to talk about a role, a project or an idea, [email me](mailto:sefidian.milad72@gmail.com) or find me on [LinkedIn](https://www.linkedin.com/in/milad-sefidian-b28077402).
+If you'd like to talk about a role, a project or an idea, [email me](mailto:sefidian.milad72@gmail.com) or find me on [LinkedIn](https://www.linkedin.com/in/miladsefidyan).

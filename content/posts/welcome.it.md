@@ -20,4 +20,4 @@ Questo sito raccoglie in un unico posto il mio [CV](/cv/), i miei [progetti](/pr
 
 Il persiano è la mia lingua madre, l’inglese è la lingua in cui lavoro e l’italiano è la lingua del Paese in cui vivo. Alcuni articoli usciranno in tutte e tre le lingue, altri in una sola.
 
-Se vuoi parlarmi di un ruolo, di un progetto o di un’idea, [scrivimi](mailto:sefidian.milad72@gmail.com) o trovami su [LinkedIn](https://www.linkedin.com/in/milad-sefidian-b28077402).
+Se vuoi parlarmi di un ruolo, di un progetto o di un’idea, [scrivimi](mailto:sefidian.milad72@gmail.com) o trovami su [LinkedIn](https://www.linkedin.com/in/miladsefidyan).
