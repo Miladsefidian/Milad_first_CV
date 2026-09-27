@@ -1,0 +1,120 @@
+# Contenuti del CV in italiano. Usati dalle pagine Home, CV e Formazione.
+
+name: Milad Sefidyan
+headline: Giurista — compliance, regolamentazione finanziaria e sostenibilità (ESG)
+location: Milano, Italia
+
+profile: >-
+  Avvocato abilitato in Iran e giurista con esperienza in regolamentazione finanziaria, gestione del
+  rischio regolamentare e sanzionatorio e sostenibilità d’impresa (ESG). Unisco il rigore giuridico a
+  competenze di analisi quantitativa (metodi econometrici, Stata) e a una conoscenza pratica dei quadri
+  normativi europei in materia di compliance bancaria e sostenibilità. Cerco un ruolo professionale o un
+  tirocinio in ambito compliance, ESG o nel settore bancario in Italia.
+
+glance:
+  - label: Dove
+    value: Milano, Italia
+  - label: Abilitazione
+    value: Avvocato, Iranian Central Bar — tra i migliori 2% su oltre 81.000 candidati
+  - label: Formazione
+    value: LL.M. in Law and Sustainable Development, Università degli Studi di Milano
+  - label: Ambiti
+    value: Compliance · regolamentazione finanziaria · ESG · rischio geopolitico
+  - label: Metodi
+    value: Stata · dati panel (Panel VAR, GMM) · analisi cross-country
+  - label: Lingue
+    value: Persiano (madrelingua) · inglese (C1) · italiano (B1)
+
+experience:
+  - title: Tirocinante legale in sostenibilità d’impresa
+    org: Fard Industrial Company
+    place: Iran
+    period: dic 2025 – gen 2026
+    points:
+      - Ricerca e analisi dei quadri normativi internazionali e degli standard di sostenibilità d’impresa, in collaborazione con l’ufficio legale interno.
+      - Valutazione dei requisiti giuridici necessari per l’allineamento formale agli Obiettivi di Sviluppo Sostenibile (SDGs) in un contesto aziendale industriale.
+      - Applicazione diretta dei contenuti del Master of Laws (LL.M.) alla strategia legale d’impresa, nell’ambito di un programma strutturato di 200 ore.
+  - title: Avvocato (abilitato in Iran) e consulente legale d’impresa
+    org: Iranian Central Bar Association ed Etminan Energy Co.
+    period: mar 2021 – nov 2023
+    points:
+      - Principale consulente legale di un’importante rete di distribuzione di prodotti petroliferi e stazioni di servizio, con responsabilità su conformità normativa e gestione dei rischi operativi in un settore altamente regolamentato.
+      - Consulenza su strutture contrattuali finanziarie e sull’esposizione al rischio regolamentare e sanzionatorio in un settore ad alta intensità di capitale.
+      - Redazione, revisione e negoziazione di contratti commerciali complessi, contratti di fornitura e policy in materia di lavoro.
+      - Tra i migliori 2% su oltre 81.000 candidati all’esame dell’Iranian Central Bar (ICBar).
+  - title: Analista giuridico-economico e giornalista indipendente
+    period: mar 2020 – gen 2021
+    points:
+      - Autore di report analitici su tendenze macroeconomiche, strategie di investimento e dinamiche dei mercati finanziari.
+      - "Traduzione e pubblicazione del testo economico *In Defence of Capitalism: Debunking the Myths*."
+
+education:
+  - title: Laurea magistrale (LL.M.) in Law and Sustainable Development
+    org: Università degli Studi di Milano
+    place: Italia
+    period: 2023 – 2026
+    thesis: "The Impact of Geopolitical Risk on GDP Growth and Macroeconomic Stability: A Quantitative Cross-Country Analysis"
+    coursework:
+      - name: Artificial Intelligence and Digital Transformation Law
+        grade: 28/30
+      - name: Economic Geography and Public Administration
+        grade: 28/30
+      - name: Empirical Legal Studies
+        grade: 23/30
+  - title: Laurea di primo livello in Giurisprudenza (Bachelor of Law)
+    org: Azad University of Shahrood
+    place: Iran
+    period: 2017 – 2020
+    points:
+      - Media 3,60/4,00, tra il 10% dei migliori studenti del corso.
+      - Vincitore della Moot Court universitaria del 2019.
+
+qualification:
+  - title: Abilitazione alla professione di avvocato
+    org: Iranian Central Bar Association (ICBar)
+    note: Tra i migliori 2% su oltre 81.000 candidati all’esame di abilitazione.
+
+research:
+  - title: L’impatto delle rendite petrolifere sui sussidi alle imprese statali e sulla concorrenza sleale
+    org: Ministero dell’Economia e delle Finanze dell’Iran
+    period: 2024 – 2025
+    points:
+      - Analisi di come le entrate petrolifere influenzino i sussidi pubblici alle imprese statali e dei conseguenti effetti distorsivi sulla concorrenza nel settore privato, un tema strettamente legato al diritto della concorrenza e alla vigilanza regolamentare.
+  - title: "«Which Women’s Revolution?»"
+    org: Concorso nazionale di analisi dei dati, Iran
+    period: 2026 (finalista)
+    points:
+      - Analisi statistica disaggregata per genere di un movimento sociale nazionale.
+
+skills:
+  - area: Compliance e gestione del rischio regolamentare
+    detail: regolamentazione finanziaria, esposizione al rischio sanzioni, compliance in settori altamente regolamentati.
+  - area: ESG e sostenibilità
+    detail: allineamento agli SDGs, quadri normativi UE sulla sostenibilità, sostenibilità d’impresa.
+  - area: Analisi quantitativa
+    detail: Stata, metodi per dati panel (Panel VAR, GMM), analisi cross-country.
+  - area: Redazione contrattuale
+    detail: contratti commerciali, contratti di fornitura, policy aziendali.
+
+certifications:
+  - name: "Oxford Master Diploma: Economics (Macro/Micro)"
+    issuer: Udemy
+    detail: 69,5 ore, certificato a febbraio 2026
+  - name: Data Science & AI Advanced Full Course
+    issuer: Udemy
+  - name: What is Data Science?
+    issuer: IBM / Coursera
+    detail: "2023"
+  - name: Microeconomics & Macroeconomics
+    issuer: Khan Academy
+
+languages:
+  - name: Persiano
+    level: Madrelingua
+    cefr: native
+  - name: Inglese
+    level: Professionale (C1)
+    cefr: C1
+  - name: Italiano
+    level: Intermedio (B1)
+    cefr: B1

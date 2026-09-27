@@ -1,0 +1,21 @@
+{{- /* schema.org Person data for search engines (home page only). */ -}}
+{{- $cv := partial "cv-data.html" . }}
+{{- $person := dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "name" "Milad Sefidyan"
+  "alternateName" "میلاد سفیدیان"
+  "url" site.Home.Permalink
+  "description" $cv.headline
+  "email" (printf "mailto:%s" site.Params.email)
+  "address" (dict "@type" "PostalAddress" "addressLocality" "Milan" "addressCountry" "IT")
+  "alumniOf" (slice
+    (dict "@type" "CollegeOrUniversity" "name" "Università degli Studi di Milano")
+    (dict "@type" "CollegeOrUniversity" "name" "Azad University of Shahrood"))
+  "knowsLanguage" (slice "fa" "en" "it")
+  "sameAs" (slice site.Params.linkedin site.Params.github)
+}}
+{{- with partial "photo.html" (dict "crop" "portrait" "spec" "1200x1200 q82") }}
+  {{- $person = merge $person (dict "image" .Permalink) }}
+{{- end }}
+<script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>

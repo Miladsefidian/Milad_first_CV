@@ -1,0 +1,19 @@
+{{- /*
+  Makes site links written as [text](/cv/) work in every language and under the
+  site's sub-path: "/cv/" becomes the CV page in the current language.
+*/ -}}
+{{- $href := .Destination }}
+{{- $u := urls.Parse .Destination }}
+{{- if and (not $u.IsAbs) (strings.HasPrefix $u.Path "/") }}
+  {{- $path := strings.TrimSuffix "/" $u.Path }}
+  {{- $target := cond (eq $path "") site.Home (site.GetPage $path) }}
+  {{- with $target }}
+    {{- $href = .RelPermalink }}
+  {{- else }}
+    {{- $href = relURL (strings.TrimPrefix "/" $u.Path) }}
+  {{- end }}
+  {{- with $u.RawQuery }}{{ $href = printf "%s?%s" $href . }}{{ end }}
+  {{- with $u.Fragment }}{{ $href = printf "%s#%s" $href . }}{{ end }}
+{{- end -}}
+<a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>
+{{- /**/ -}}

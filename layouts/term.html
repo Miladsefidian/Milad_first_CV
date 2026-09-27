@@ -1,0 +1,9 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ i18n "tagged" (dict "Tag" .LinkTitle) }}</h1>
+</header>
+{{ partial "post-list.html" (dict "pages" .Pages "level" 2) }}
+{{- with site.GetPage "/posts" }}
+<p><a href="{{ .RelPermalink }}">{{ i18n "back_to_posts" }}</a></p>
+{{- end }}
+{{ end }}

@@ -1,0 +1,15 @@
+{{- /*
+  Returns a processed copy of the profile photo.
+  crop "face": a tight square around the face (avatar, touch icon).
+  crop "portrait": the whole photo cropped to the requested size.
+  spec: Hugo image processing spec, e.g. "112x112 q85" or "180x180 png".
+*/ -}}
+{{- $result := false }}
+{{- with resources.Get site.Params.photo }}
+  {{- if eq $.crop "face" }}
+    {{- $result = (.Crop "860x860 Top").Resize $.spec }}
+  {{- else }}
+    {{- $result = .Fill (printf "%s Top" $.spec) }}
+  {{- end }}
+{{- end }}
+{{- return $result }}

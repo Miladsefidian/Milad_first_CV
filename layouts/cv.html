@@ -1,0 +1,66 @@
+{{ define "main" }}
+{{- $cv := partial "cv-data.html" . }}
+<article class="cv">
+  <header class="cv-header">
+    <h1>{{ $cv.name }}</h1>
+    <p class="lede">{{ $cv.headline }}</p>
+    <ul class="cv-contact">
+      <li>{{ $cv.location }}</li>
+      <li><a href="mailto:{{ site.Params.email }}"><bdi>{{ site.Params.email }}</bdi></a></li>
+      <li><a href="{{ site.Params.linkedin }}"><bdi>{{ strings.TrimPrefix "https://www." site.Params.linkedin }}</bdi></a></li>
+    </ul>
+    <p class="actions no-print"><button class="button secondary" type="button" data-print>{{ i18n "print_cv" }}</button></p>
+  </header>
+
+  <section class="cv-section" aria-labelledby="cv-profile">
+    <h2 id="cv-profile">{{ i18n "profile" }}</h2>
+    <p>{{ $cv.profile }}</p>
+  </section>
+
+  <section class="cv-section" aria-labelledby="cv-experience">
+    <h2 id="cv-experience">{{ i18n "experience" }}</h2>
+    {{- range $cv.experience }}
+    {{ partial "cv/entry.html" . }}
+    {{- end }}
+  </section>
+
+  <section class="cv-section" aria-labelledby="cv-education">
+    <h2 id="cv-education">{{ i18n "education" }}</h2>
+    {{- range $cv.education }}
+    {{ partial "cv/degree.html" . }}
+    {{- end }}
+  </section>
+
+  <section class="cv-section" aria-labelledby="cv-research">
+    <h2 id="cv-research">{{ i18n "research" }}</h2>
+    {{- range $cv.research }}
+    {{ partial "cv/entry.html" . }}
+    {{- end }}
+  </section>
+
+  <section class="cv-section" aria-labelledby="cv-skills">
+    <h2 id="cv-skills">{{ i18n "skills" }}</h2>
+    <ul class="bullets">
+      {{- range $cv.skills }}
+      <li><strong>{{ .area }}:</strong> {{ .detail }}</li>
+      {{- end }}
+    </ul>
+  </section>
+
+  <section class="cv-section" aria-labelledby="cv-certifications">
+    <h2 id="cv-certifications">{{ i18n "certifications" }}</h2>
+    <ul class="bullets">
+      {{- range $cv.certifications }}
+      <li><bdi>{{ .name }}</bdi> — <bdi>{{ .issuer }}</bdi>{{ with .detail }}{{ i18n "comma" }}{{ . }}{{ end }}</li>
+      {{- end }}
+    </ul>
+  </section>
+
+  <section class="cv-section" aria-labelledby="cv-languages">
+    <h2 id="cv-languages">{{ i18n "languages" }}</h2>
+    <p>
+      {{- range $i, $l := $cv.languages }}{{ if $i }} <span aria-hidden="true">|</span> {{ end }}<strong>{{ $l.name }}</strong> — {{ $l.level }}{{ end -}}
+    </p>
+  </section>
+</article>
+{{ end }}

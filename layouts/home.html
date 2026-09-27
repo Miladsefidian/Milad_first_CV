@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{- $cv := partial "cv-data.html" . }}
+<section class="hero">
+  <div>
+    <h1>{{ .Title }}</h1>
+    <p class="lede">{{ $cv.headline }}</p>
+  </div>
+  {{- with partial "photo.html" (dict "crop" "portrait" "spec" "480x480 q85") }}
+  <img class="portrait" src="{{ .RelPermalink }}" width="208" height="208" alt="{{ i18n "portrait_alt" }}" fetchpriority="high">
+  {{- end }}
+</section>
+
+<div class="prose intro-text">
+  {{ .Content }}
+</div>
+
+<p class="actions">
+  {{- with site.GetPage "/cv" }}
+  <a class="button" href="{{ .RelPermalink }}">{{ i18n "view_cv" }}</a>
+  {{- end }}
+  <a class="button secondary" href="mailto:{{ site.Params.email }}">{{ i18n "email_me" }}</a>
+</p>
+
+<section class="block" aria-labelledby="glance-title">
+  <h2 id="glance-title" class="section-title">{{ i18n "at_a_glance" }}</h2>
+  <dl class="glance">
+    {{- range $cv.glance }}
+    <dt>{{ .label }}</dt>
+    <dd>{{ .value | markdownify }}</dd>
+    {{- end }}
+  </dl>
+</section>
+
+<section class="block" aria-labelledby="latest-title">
+  <h2 id="latest-title" class="section-title">{{ i18n "latest_posts" }}</h2>
+  {{- with where site.RegularPages "Section" "posts" }}
+  {{ partial "post-list.html" (dict "pages" (first 3 .) "level" 3) }}
+  <p class="more"><a href="{{ (site.GetPage "/posts").RelPermalink }}">{{ i18n "all_posts" }}</a></p>
+  {{- else }}
+  <p class="muted">{{ i18n "no_posts" }}</p>
+  {{- end }}
+</section>
+
+<section class="block" aria-labelledby="contact-title">
+  <h2 id="contact-title" class="section-title">{{ i18n "get_in_touch" }}</h2>
+  <p>{{ i18n "contact_text" }}</p>
+  <ul class="contact-list">
+    <li><span class="label">{{ i18n "email" }}</span> <a href="mailto:{{ site.Params.email }}"><bdi>{{ site.Params.email }}</bdi></a></li>
+    <li><span class="label">LinkedIn</span> <a href="{{ site.Params.linkedin }}" rel="me"><bdi>{{ strings.TrimPrefix "https://www." site.Params.linkedin }}</bdi></a></li>
+    <li><span class="label">GitHub</span> <a href="{{ site.Params.github }}" rel="me"><bdi>{{ strings.TrimPrefix "https://" site.Params.github }}</bdi></a></li>
+  </ul>
+</section>
+{{ end }}

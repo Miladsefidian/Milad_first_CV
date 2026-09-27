@@ -1,0 +1,19 @@
+{{- /* One experience or research entry: title and period, organisation, bullet points. */ -}}
+<div class="entry">
+  <div class="entry-head">
+    <h3 class="entry-title">{{ .title | markdownify }}</h3>
+    {{- with .period }}
+    <span class="entry-period">{{ . }}</span>
+    {{- end }}
+  </div>
+  {{- if or .org .place }}
+  <p class="entry-org">{{ with .org }}<bdi>{{ . }}</bdi>{{ end }}{{ if and .org .place }}{{ i18n "comma" }}{{ end }}{{ with .place }}{{ . }}{{ end }}</p>
+  {{- end }}
+  {{- with .points }}
+  <ul>
+    {{- range . }}
+    <li>{{ . | markdownify }}</li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</div>

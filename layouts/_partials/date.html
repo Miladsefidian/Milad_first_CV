@@ -1,0 +1,3 @@
+{{- /* A localized <time> element. On the Persian site, main.js converts it to the Solar Hijri calendar. */ -}}
+<time datetime="{{ .Format "2006-01-02" }}">{{ partial "num.html" (time.Format ":date_long" .) }}</time>
+{{- /**/ -}}

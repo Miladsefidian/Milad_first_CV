@@ -1,0 +1,121 @@
+# CV content in English. Used by the Home, CV and Education pages.
+# Text fields accept Markdown, e.g. *italics* for titles.
+
+name: Milad Sefidyan
+headline: Legal professional — compliance, financial regulation & sustainability (ESG)
+location: Milan, Italy
+
+profile: >-
+  Attorney and legal professional with experience in financial regulation, regulatory and
+  sanctions-risk management, and corporate sustainability (ESG). Combines legal rigor with
+  quantitative analytical skills (econometric methods, Stata) and practical knowledge of European
+  regulatory frameworks for banking compliance and sustainability. Seeking a professional role or
+  internship in compliance, ESG, or the banking sector in Italy.
+
+glance:
+  - label: Based in
+    value: Milan, Italy
+  - label: Qualification
+    value: Attorney at law, Iranian Central Bar — top 2% of 81,000+ examinees
+  - label: Education
+    value: LL.M. in Law and Sustainable Development, University of Milan
+  - label: Focus
+    value: Compliance · financial regulation · ESG · geopolitical risk
+  - label: Methods
+    value: Stata · panel data (Panel VAR, GMM) · cross-country analysis
+  - label: Languages
+    value: Persian (native) · English (C1) · Italian (B1)
+
+experience:
+  - title: Corporate Sustainability Legal Intern
+    org: Fard Industrial Company
+    place: Iran
+    period: Dec 2025 – Jan 2026
+    points:
+      - Researched and analyzed international regulatory frameworks and corporate sustainability standards in collaboration with the internal legal team.
+      - Assessed the legal requirements necessary for formal alignment with the Sustainable Development Goals (SDGs) within an industrial corporate environment.
+      - Applied Master of Laws (LL.M.) frameworks directly to real-world corporate legal strategy, as part of a structured 200-hour program.
+  - title: Attorney at Law & Corporate Legal Counsel
+    org: Iranian Central Bar Association & Etminan Energy Co.
+    period: Mar 2021 – Nov 2023
+    points:
+      - Served as primary legal counsel for a major petroleum products and gas station network, ensuring regulatory compliance and operational risk management within a highly regulated sector.
+      - Advised on financial contractual structures and exposure to regulatory and sanctions risk within a capital-intensive sector.
+      - Drafted, reviewed, and negotiated complex commercial agreements, vendor contracts, and employment policies.
+      - Ranked in the top 2% among 81,000+ examinees in the Iranian Central Bar (ICBar) examination.
+  - title: Legal-Economic Analyst & Independent Journalist
+    period: Mar 2020 – Jan 2021
+    points:
+      - Authored analytical reports on macroeconomic trends, investment strategy, and financial market dynamics.
+      - "Translated and published the economic text *In Defence of Capitalism: Debunking the Myths*."
+
+education:
+  - title: LL.M. in Law and Sustainable Development
+    org: Università degli Studi di Milano
+    place: Italy
+    period: 2023 – 2026
+    thesis: "The Impact of Geopolitical Risk on GDP Growth and Macroeconomic Stability: A Quantitative Cross-Country Analysis"
+    coursework:
+      - name: Artificial Intelligence and Digital Transformation Law
+        grade: 28/30
+      - name: Economic Geography and Public Administration
+        grade: 28/30
+      - name: Empirical Legal Studies
+        grade: 23/30
+  - title: Bachelor of Law
+    org: Azad University of Shahrood
+    place: Iran
+    period: 2017 – 2020
+    points:
+      - GPA 3.60/4.00, top 10% of cohort.
+      - Winner, 2019 University Moot Court.
+
+qualification:
+  - title: Admission to the bar — Attorney at law
+    org: Iranian Central Bar Association (ICBar)
+    note: Ranked in the top 2% among 81,000+ examinees in the ICBar examination.
+
+research:
+  - title: Impact of Oil Revenues on State-Owned Enterprise Subsidies and Unfair Competition
+    org: Iran’s Ministry of Economic Affairs and Finance
+    period: 2024 – 2025
+    points:
+      - Analyzed how oil revenues influence government subsidies to state-owned enterprises and the resulting distortive effects on private-sector competition — a topic closely related to competition law and regulatory oversight.
+  - title: "“Which Women’s Revolution?”"
+    org: National Data Analysis Competition, Iran
+    period: 2026 (Finalist)
+    points:
+      - Conducted a gender-disaggregated statistical analysis of a national social movement.
+
+skills:
+  - area: Compliance & regulatory risk management
+    detail: financial regulation, exposure to sanctions risk, compliance in highly regulated sectors.
+  - area: ESG & sustainability
+    detail: SDG alignment, EU sustainability regulatory frameworks, corporate sustainability.
+  - area: Quantitative analysis
+    detail: Stata, panel data methods (Panel VAR, GMM), cross-country analysis.
+  - area: Contract drafting
+    detail: commercial agreements, vendor contracts, corporate policies.
+
+certifications:
+  - name: "Oxford Master Diploma: Economics (Macro/Micro)"
+    issuer: Udemy
+    detail: 69.5 hours, certified February 2026
+  - name: Data Science & AI Advanced Full Course
+    issuer: Udemy
+  - name: What is Data Science?
+    issuer: IBM / Coursera
+    detail: "2023"
+  - name: Microeconomics & Macroeconomics
+    issuer: Khan Academy
+
+languages:
+  - name: Persian
+    level: Native
+    cefr: native
+  - name: English
+    level: Professional (C1)
+    cefr: C1
+  - name: Italian
+    level: Intermediate (B1)
+    cefr: B1

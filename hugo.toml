@@ -1,0 +1,57 @@
+# The site's public address (Cloudflare Pages). Change this if you add a custom domain.
+baseURL = "https://milad-sefidyan.pages.dev/"
+title = "Milad Sefidyan"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+timeZone = "Europe/Rome"
+
+[module.hugoVersion]
+  min = "0.158.0"
+
+[pagination]
+  pagerSize = 20
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["html", "rss"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]
+  term = ["html"]
+
+# Allow inline HTML in posts (for example <bdi> around English words in Persian text).
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  author = "Milad Sefidyan"
+  email = "sefidian.milad72@gmail.com"
+  linkedin = "https://www.linkedin.com/in/milad-sefidian-b28077402"
+  github = "https://github.com/Miladsefidian"
+  photo = "images/milad.jpg"
+
+[languages.en]
+  label = "English"
+  weight = 1
+  title = "Milad Sefidyan"
+  [languages.en.params]
+    tagline = "Law, compliance & ESG · Milan"
+    description = "Milad Sefidyan, a lawyer in Milan working on financial regulation, compliance and sustainability (ESG). CV, projects, education and blog."
+
+[languages.it]
+  label = "Italiano"
+  weight = 2
+  title = "Milad Sefidyan"
+  [languages.it.params]
+    tagline = "Diritto, compliance ed ESG · Milano"
+    description = "Milad Sefidyan, giurista a Milano: regolamentazione finanziaria, compliance e sostenibilità (ESG). CV, progetti, formazione e blog."
+
+[languages.fa]
+  label = "فارسی"
+  direction = "rtl"
+  weight = 3
+  title = "میلاد سفیدیان"
+  [languages.fa.params]
+    tagline = "حقوق، کامپلاینس و ESG · میلان"
+    description = "میلاد سفیدیان، حقوق‌دان ساکن میلان در حوزهٔ مقررات مالی، کامپلاینس و پایداری (ESG). رزومه، پروژه‌ها، تحصیلات و وبلاگ."

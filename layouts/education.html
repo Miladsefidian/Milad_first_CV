@@ -1,0 +1,59 @@
+{{ define "main" }}
+{{- $cv := partial "cv-data.html" . }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}
+  <div class="page-intro">{{ . }}</div>
+  {{- end }}
+</header>
+
+<section class="cv-section" aria-labelledby="edu-degrees">
+  <h2 id="edu-degrees">{{ i18n "degrees" }}</h2>
+  {{- range $cv.education }}
+  {{ partial "cv/degree.html" . }}
+  {{- end }}
+</section>
+
+{{- with $cv.qualification }}
+<section class="cv-section" aria-labelledby="edu-qualification">
+  <h2 id="edu-qualification">{{ i18n "qualification" }}</h2>
+  {{- range . }}
+  <div class="entry">
+    <h3 class="entry-title">{{ .title }}</h3>
+    <p class="entry-org"><bdi>{{ .org }}</bdi></p>
+    {{- with .note }}
+    <p class="entry-note">{{ . }}</p>
+    {{- end }}
+  </div>
+  {{- end }}
+</section>
+{{- end }}
+
+<section class="cv-section" aria-labelledby="edu-certifications">
+  <h2 id="edu-certifications">{{ i18n "certifications" }}</h2>
+  <ul class="cert-list">
+    {{- range $cv.certifications }}
+    <li>
+      <span class="cert-name"><bdi>{{ .name }}</bdi></span>
+      <span class="cert-meta"><bdi>{{ .issuer }}</bdi>{{ with .detail }}{{ i18n "comma" }}{{ . }}{{ end }}</span>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+
+<section class="cv-section" aria-labelledby="edu-languages">
+  <h2 id="edu-languages">{{ i18n "languages" }}</h2>
+  {{- $steps := dict "A1" 1 "A2" 2 "B1" 3 "B2" 4 "C1" 5 "C2" 6 "native" 6 }}
+  <ul class="lang-levels">
+    {{- range $cv.languages }}
+    {{- $n := index $steps .cefr | default 0 }}
+    <li>
+      <strong class="lang-name">{{ .name }}</strong>
+      <span class="cefr" aria-hidden="true">{{ range seq 6 }}<i{{ if le . $n }} class="on"{{ end }}></i>{{ end }}</span>
+      <span class="lang-level">{{ .level }}</span>
+    </li>
+    {{- end }}
+  </ul>
+  <p class="note">{{ i18n "cefr_note" }}</p>
+</section>
+{{ end }}

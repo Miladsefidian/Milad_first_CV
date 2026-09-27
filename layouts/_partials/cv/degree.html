@@ -1,0 +1,29 @@
+{{- /* One degree: title and period, school, thesis, coursework with grades, notes. */ -}}
+<div class="entry">
+  <div class="entry-head">
+    <h3 class="entry-title">{{ .title }}</h3>
+    {{- with .period }}
+    <span class="entry-period">{{ . }}</span>
+    {{- end }}
+  </div>
+  <p class="entry-org"><bdi>{{ .org }}</bdi>{{ with .place }}{{ i18n "comma" }}{{ . }}{{ end }}</p>
+  {{- with .thesis }}
+  <p class="thesis"><span class="label-muted">{{ i18n "thesis" }}:</span> <cite>{{ . }}</cite>
+    {{- with $.thesis_original }}<span class="thesis-original" lang="en">{{ . }}</span>{{ end }}</p>
+  {{- end }}
+  {{- with .coursework }}
+  <p class="thesis label-muted">{{ i18n "coursework" }}:</p>
+  <ul class="coursework">
+    {{- range . }}
+    <li><span><bdi>{{ .name }}</bdi></span> <span class="grade">{{ .grade }}</span></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  {{- with .points }}
+  <ul>
+    {{- range . }}
+    <li>{{ . | markdownify }}</li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</div>

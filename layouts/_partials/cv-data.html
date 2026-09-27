@@ -1,0 +1,2 @@
+{{- /* CV data for the current language (data/cv/<lang>.yaml), falling back to English. */ -}}
+{{- return (index hugo.Data.cv site.Language.Lang | default hugo.Data.cv.en) }}

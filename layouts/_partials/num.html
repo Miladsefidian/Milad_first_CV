@@ -1,0 +1,8 @@
+{{- /* Returns the input as a string, with Persian digits on the Persian site. */ -}}
+{{- $s := string . }}
+{{- if eq site.Language.Lang "fa" }}
+  {{- range $i, $digit := slice "۰" "۱" "۲" "۳" "۴" "۵" "۶" "۷" "۸" "۹" }}
+    {{- $s = replace $s (string $i) $digit }}
+  {{- end }}
+{{- end }}
+{{- return $s }}

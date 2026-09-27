@@ -1,0 +1,33 @@
+<header class="site-header">
+  <div class="wrap header-top">
+    <a class="brand" href="{{ site.Home.RelPermalink }}" rel="home">
+      {{- with partial "photo.html" (dict "crop" "face" "spec" "112x112 q85") }}
+      <img class="avatar" src="{{ .RelPermalink }}" width="56" height="56" alt="">
+      {{- end }}
+      <span class="brand-text">
+        <span class="brand-name">{{ site.Title }}</span>
+        <span class="brand-tagline">{{ site.Params.tagline }}</span>
+      </span>
+    </a>
+    <div class="header-tools">
+      {{ partial "lang-switch.html" . }}
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="{{ i18n "dark_mode" }}" title="{{ i18n "dark_mode" }}">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="wrap site-nav" aria-label="{{ i18n "main_navigation" }}">
+    <ul>
+      {{- $current := . }}
+      {{- range slice (slice "/" "nav_home") (slice "/cv" "nav_cv") (slice "/projects" "nav_projects") (slice "/education" "nav_education") (slice "/posts" "nav_blog") }}
+        {{- $label := index . 1 }}
+        {{- with site.GetPage (index . 0) }}
+          {{- $exact := eq $current.RelPermalink .RelPermalink }}
+          {{- $inside := and (not .IsHome) ($current.IsDescendant .) }}
+      <li><a href="{{ .RelPermalink }}"{{ if $exact }} aria-current="page"{{ else if $inside }} class="active"{{ end }}>{{ i18n $label }}</a></li>
+        {{- end }}
+      {{- end }}
+    </ul>
+  </nav>
+</header>

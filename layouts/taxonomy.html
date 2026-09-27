@@ -1,0 +1,10 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ i18n "tags" }}</h1>
+</header>
+<ul class="tags">
+  {{- range .Pages }}
+  <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> <span aria-hidden="true">·</span> {{ partial "num.html" (len .Pages) }}</li>
+  {{- end }}
+</ul>
+{{ end }}

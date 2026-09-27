@@ -1,0 +1,29 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}
+  <div class="page-intro">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{- $projects := index hugo.Data.projects site.Language.Lang | default hugo.Data.projects.en }}
+<ul class="projects">
+  {{- range $projects }}
+  <li class="project">
+    <p class="project-kind">{{ .kind }}{{ with .period }} · {{ . }}{{ end }}</p>
+    <h2>{{ .title }}</h2>
+    {{- with .org }}
+    <p class="project-org"><bdi>{{ . }}</bdi></p>
+    {{- end }}
+    <p class="project-summary">{{ .summary | markdownify }}</p>
+    {{- with .tags }}
+    <ul class="tags" aria-label="{{ i18n "keywords" }}">
+      {{- range . }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+    {{- end }}
+  </li>
+  {{- end }}
+</ul>
+{{ end }}

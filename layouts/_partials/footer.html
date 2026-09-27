@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="footer-links">
+      <li><a href="mailto:{{ site.Params.email }}">{{ i18n "email" }}</a></li>
+      <li><a href="{{ site.Params.linkedin }}" rel="me">LinkedIn</a></li>
+      <li><a href="{{ site.Params.github }}" rel="me">GitHub</a></li>
+      {{- with site.GetPage "/posts" }}
+        {{- with .OutputFormats.Get "rss" }}
+      <li><a href="{{ .RelPermalink }}">RSS</a></li>
+        {{- end }}
+      {{- end }}
+    </ul>
+    <p>© {{ partial "num.html" now.Year }} {{ site.Title }}. {{ i18n "rights" }}</p>
+  </div>
+</footer>
